@@ -1,0 +1,15 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': ratioPoste > 0,
+                'list-group-item-secondary': ratioPoste === 0,
+                'list-group-item-danger': ratioPoste < 0}">
+  <p style="float:right;margin: 0px;padding: 0px;color: black">{{datePoste | date: 'dd/MM/y, à H:mm'}}</p>
+  <h3 >{{ tittrePoste}}<!-- ratio : <span  [ngStyle]="{color: getcolorp()}">{{ ratioPoste}}</span>--></h3>
+{{contentPost}}
+  <br />
+  <button style="margin: 0.3em;" class="btn btn-success"
+           (click)="jaime()">j'aime</button>
+  <button style="margin: 0.3em;" class="btn btn-danger"
+           (click)="jaimePas()">je n'aime pas</button>
+</li>
+
+

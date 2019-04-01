@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-xs-12">
+      <h2>Liste des postes</h2>
+        <li style="list-style: none !important;" class="container">
+          <ul class="list-group">
+            <app-postes *ngFor="let leposte of postes"
+                      [tittrePoste]="leposte.title"
+                      [contentPost]="leposte.content"
+                      [ratioPoste]="leposte.loveIts"
+                      [datePoste]="leposte.created_at">
+           </app-postes>
+          </ul>
+        </li>
+    </div>
+  </div>
+
